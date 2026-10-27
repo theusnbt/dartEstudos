@@ -1,17 +1,24 @@
 class Veiculo {
-  late String sla1;
-  late String sla2;
-  late String sla3;
+  late String modelo;
+  late int veloAtual;
+  late int veloMax;
+  late String cor;
+  bool ligado = false;
 
-  void slaOq(){
-
-  }
-  void slaOq1(){
-  
-  }
-  void slaOq2(){
-  
+  void ligar() {
+    ligado = true;
   }
 
+  void acelerar(int qtd) {
+    if (ligado) {
+      veloAtual += qtd;
+      veloAtual = veloAtual > veloMax ? veloMax : veloAtual;
+    } else
+      print("desligado");
+  }
+
+  void frear(int qtd) {
+    veloAtual -= qtd;
+    veloAtual = veloAtual < 0 ? 0 : veloAtual;
+  }
 }
-
