@@ -5,7 +5,7 @@ class Veiculo {
   late String cor;
   bool ligado = false;
 
-  void ligar() {
+  void ligar() {  
     ligado = true;
   }
 
